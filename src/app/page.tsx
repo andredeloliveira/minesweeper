@@ -22,15 +22,27 @@ const MineSweeper = () => {
 
   return (
     <div>
+      { cells.map((row, i) => {
+        return (
+          <div key={i} className="row">
+            { row.map((col, j) => {
+                return (
+                  <div key={i+j} className="col">
+                    <Cell state={col.state} value={col.value} />
+                  </div>
+                )
+            }) }
+          </div>
+        )
+      }) }
     </div>
   )
 }
 
 function Cell({ value, state }: Cell) {
   return (
-    <div className="">
+    <div className="cell">
       <span>{value}</span>
-      <span>{state}</span>
     </div>
   )
 }

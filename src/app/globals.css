@@ -20,6 +20,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 50px
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
