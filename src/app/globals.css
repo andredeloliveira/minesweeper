@@ -27,9 +27,6 @@ body {
 }
 
 .col {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
   border: 1px solid black;
   border-radius: 3px;
   text-align: center;
@@ -39,6 +36,15 @@ body {
   border: 1px solid black;
   padding: 5px 10px 10px 5px;
   width: 100px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .game-container {
@@ -52,17 +58,10 @@ body {
 }
 
 .cell.hidden {
-  width: 50px;
-  height: 50px;
-  display: block;
   background-color: #e0e0e0;
   border: 1px solid #ccc;
-  cursor: pointer;
 }
 
-.cell.revealed span {
-  display: block;
-}
 
 .cell.hidden span {
   display: none;
@@ -72,23 +71,20 @@ body {
   display: none;
 }
 
+.cell.flagged-bomb {
+  background-color: red;
+}
+
+
 .cell.flagged {
-  width: 50px;
-  height: 50px;
-  display: block;
   background-color: red;
   border: 1px solid #ccc;
-  cursor: pointer;
 }
 
 .cell.revealed {
-  width: 50px;
-  height: 50px;
-  display: block;
   border: 1px solid #ccc;
   cursor: pointer;
 }
-
 
 
 @layer utilities {
