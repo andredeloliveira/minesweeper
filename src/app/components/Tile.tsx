@@ -1,9 +1,9 @@
 import { Cell } from "../types"
 
-function Tile(props: Cell) {
+const Tile = ({ state, value }: Cell ) => {
   return (
-    <div className={`cell ${props.state}`}>
-      <span>{props.value ? props.value : null}</span>
+    <div className={`cell ${state}`}>
+      <span>{value ? value : null}</span>
     </div>
   )
 }
