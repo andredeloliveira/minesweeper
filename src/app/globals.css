@@ -29,7 +29,9 @@ body {
 .col {
   display: flex;
   flex-direction: column;
-  width: 50px
+  width: 50px;
+  border: 1px solid black;
+  text-align: center;
 }
 
 .cell {
